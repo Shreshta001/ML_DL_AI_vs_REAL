@@ -1,73 +1,75 @@
-# 📄 Identification of AI-Generated Synthetic Images
+# 🔍 Detecting AI-Generated vs. Real Images
 
-**Authors:** Jordan J. Bird, Ahmad Lotfi
+## 📜 Problem Statement
 
----
-
-## 🧠 Overview of the Research
-
-> ### 🎯 **Purpose**
-> The main goal of this study is to enhance the detection of AI-generated images, which have become so realistic that humans often cannot tell them apart from actual photographs. This ability is crucial for ensuring the authenticity of visual data in various fields, including journalism, law, and social media.
+The rise of sophisticated AI techniques has made it possible to create highly realistic images that can be challenging to differentiate from actual photographs. This project aims to develop a **Machine Learning (ML) and Deep Learning (DL) model** that can accurately identify whether an image is **AI-generated** or **real**. Such models are crucial in various applications, including media verification, security, and content authenticity checks.
 
 ---
 
-## 🗂️ Dataset Creation
+## 🚀 Project Overview
 
-- **📚 CIFAR-10 Dataset:**  
-  The researchers used an existing dataset called **CIFAR-10**, which contains 60,000 small images divided into 10 categories (like 🐱 cats, 🐶 dogs, 🚗 cars, etc.). They utilized 50,000 images for training their model and 10,000 for testing it.
-  
-- **🖼️ Synthetic Image Generation:**  
-  An additional 60,000 synthetic images were generated using a technique called **Latent Diffusion Models (LDMs)**. This method creates new images based on textual prompts (like "a photograph of a cat") and random noise. The resulting dataset is named **CIFAKE**, which combines both real and synthetic images.
-
----
-
-## 🧠 Classification Method
-
-The researchers employed a **Convolutional Neural Network (CNN)** for image classification. A CNN is a type of machine learning model designed to process visual data. Here's how it works step-by-step:
-
-1. **🖼️ Input Layer:** The CNN takes an image as input.
-2. **🔍 Convolutional Layers:** These layers apply filters to the image to detect features like edges or textures. Each filter looks for specific patterns.
-3. **⚡ Activation Function (ReLU):** After applying filters, an activation function is used to introduce non-linearity into the model, helping it learn complex patterns.
-4. **🤖 Fully Connected Layers:** The features extracted by the convolutional layers are then passed through fully connected layers that make the final decision about whether the image is real or fake.
+This project focuses on building and training models to classify images as either AI-generated or real. It involves:
+- **Data Collection**: Using a combination of real and AI-generated image datasets.
+- **Model Development**: Employing advanced neural network architectures, such as **Convolutional Neural Networks (CNNs)**.
+- **Model Evaluation**: Assessing the model’s accuracy and generalization ability on unseen data.
+- **Explainability**: Using techniques like **Grad-CAM** to understand the model's decision-making process.
 
 ---
 
-## 🎓 Training Process
+## 🛠️ Methodology
 
-- The researchers trained **36 different versions** (topologies) of their CNN model to find the best-performing one.
-- They used a process called **hyperparameter tuning**, which involves adjusting settings in the model to improve its accuracy.
-
----
-
-## 📊 Results
-
-> The best model achieved an impressive accuracy score of **92.98%** 🎯, meaning it correctly classified nearly 93 out of every 100 images as either real or AI-generated.
+1. **Data Collection & Preprocessing**: Gathering a balanced dataset of real and synthetic images. Preprocessing involves resizing, normalization, and augmenting images to improve model robustness.
+2. **Model Architecture**: Designing a neural network model suited for image classification, leveraging architectures like **CNNs** for feature extraction.
+3. **Training & Tuning**: Optimizing the model through hyperparameter tuning and training on the dataset to maximize accuracy.
+4. **Evaluation**: Using metrics like accuracy, precision, recall, and F1-score to measure the model's performance.
+5. **Explainability & Analysis**: Implementing **Explainable AI (XAI)** methods to visualize how the model distinguishes between real and AI-generated images.
 
 ---
 
-## 💡 Explainable AI
+## 📊 Key Features
 
-To understand how the model made its decisions, the researchers implemented a technique called **Gradient Class Activation Mapping (Grad-CAM)**. This method highlights parts of an image that were important for the model's classification decision. Interestingly, they found that the model relied on small imperfections in the background rather than the main subject of the image to determine if it was real or fake.
-
----
-
-## 🔑 Key Technical Terms Explained
-
-- **🧠 Artificial Intelligence (AI):**  
-  The simulation of human intelligence processes by machines, especially computer systems.
-- **🖼️ Synthetic Images:**  
-  Images created by algorithms rather than captured by cameras.
-- **🤖 Convolutional Neural Network (CNN):**  
-  A type of deep learning model specifically designed for processing structured grid data like images.
-- **🌌 Latent Diffusion Models (LDMs):**  
-  A generative model that creates new data points from existing data by reversing a process that adds noise to images.
-- **⚙️ Hyperparameter Tuning:**  
-  The process of optimizing parameters within a machine learning algorithm to improve performance.
-- **🔍 Explainable AI (XAI):**  
-  Techniques that make it easier to understand how AI models make decisions.
+- **Real vs. Synthetic Image Classification**: A model capable of differentiating between real images and those generated by AI.
+- **User-Friendly Interface**: Potential integration with a simple UI for testing images.
+- **Visual Explanations**: Insights into the model's decisions using visual tools like **Grad-CAM**.
 
 ---
 
-## 🏁 Conclusion
+## 💡 Applications
 
-This research represents a significant step forward in distinguishing between real and AI-generated images. By creating a robust dataset and employing advanced machine learning techniques, Bird and Lotfi provide valuable insights into the capabilities and limitations of current AI technologies in image generation and classification. Their findings underscore the importance of developing reliable methods for verifying image authenticity in an era where synthetic imagery is increasingly prevalent.
+- **Media Authenticity**: Identifying fake images in journalism and social media.
+- **Digital Forensics**: Assisting in legal cases by verifying the authenticity of visual evidence.
+- **Content Moderation**: Ensuring authenticity in user-generated content on social media platforms.
+
+---
+
+## 🛠️ Tools & Technologies
+
+- **Python**: For data processing and model implementation.
+- **TensorFlow/PyTorch**: For building and training deep learning models.
+- **OpenCV**: For image preprocessing.
+- **Grad-CAM**: For model interpretability and visualization.
+
+---
+
+## 📚 Related Work
+
+- **Research Papers**: Exploration of state-of-the-art methods for detecting AI-generated images.
+- **AI Image Generators**: Understanding popular generative models like GANs, VAEs, and diffusion models.
+
+---
+
+## 🤝 Contributions
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features you'd like to add.
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📧 Contact
+
+For questions or collaborations, reach out to us.

@@ -1,4 +1,5 @@
-# 📄 Identification of AI-Generated Synthetic Images
+# 📄 Identification of AI-Generated Synthetic Images (on CIFAKE dataset) 
+
 
 **Authors:** Jordan J. Bird, Ahmad Lotfi
 
